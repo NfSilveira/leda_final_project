@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 struct Node {
 
@@ -26,38 +27,38 @@ int print_items_amount (Stack* s) {
 }
 
 
-void is_full(Stack* s) {
+bool is_full(Stack* s) {
 
-    int is_full_check = 0;
+    bool is_full_check = false;
 
     if (s -> stack_items_amount == s -> max_items_amount) {
-        is_full_check = 1;
+        is_full_check = true;
     }
 
-    if (is_full_check == 1) {
-        printf("The stack is full!\n");
+    if (is_full_check == true) {
+        return true;
     }
 
     else {
-        printf("The stack is not full!\n");
+        return false;
     }
 }
 
 
-void is_empty(Stack *s) {
+bool is_empty(Stack *s) {
 
-    int is_empty_check = 0;
+    bool is_empty_check = false;
 
     if (s -> stack_items_amount == NULL) {
-        is_empty_check = 1;
+        is_empty_check = true;
     }
 
-    if (is_empty_check == 1) {
-        printf("The stack is empty!\n");
+    if (is_empty_check == true) {
+        return true;
     }
 
     else {
-        printf("The stack is not empty!\n");
+        return false;
     }
 }
 
@@ -95,7 +96,7 @@ void print_all_elements(Stack* s) {
     Node* aux = s -> stack_top;
 
     if (is_empty(s)) {
-        printf("The stack is empty!\n")
+        printf("The stack is empty!\n");
     }
 
     else {
