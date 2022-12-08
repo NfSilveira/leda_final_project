@@ -15,8 +15,8 @@ typedef struct Queue {
   int qty; 
 }Queue;
 
-int ReturnQty(){
-   return q.qty;
+int ReturnQty(Queue* q){
+   return q->qty;
 }
 
 int IsFull(Queue* q){
@@ -70,7 +70,7 @@ void BuscarElemento(Queue* q, int alvo){
             printf("O alvo foi encontrado!\n");
         }
         else {
-            printf("O alvo não está presente na fila.\n", element);
+            printf("O alvo %d não está presente na fila.\n", alvo);
         }
     }
 }
@@ -119,4 +119,3 @@ Node RetirarElemento(Queue* q){
   q->qty--;
   return remove;
 }
-
