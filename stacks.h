@@ -154,4 +154,3 @@ int pop(Stack* s) {
         }
     }
 }
-
