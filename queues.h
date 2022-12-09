@@ -107,6 +107,7 @@ void InserirElemento(Queue *q, int item){
   }
 }
 
+
 Node RetirarElemento(Queue* q){
   Node remove;
 
