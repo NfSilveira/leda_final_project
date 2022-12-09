@@ -119,4 +119,3 @@ Node RetirarElemento(Queue* q){
   q->qty--;
   return remove;
 }
-
