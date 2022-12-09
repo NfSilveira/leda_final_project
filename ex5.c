@@ -127,3 +127,4 @@ void fill_with_numbers(Stack *original, Stack *even_numbers_stack, Stack *odd_nu
     top = top->next;
   }
 }
+
