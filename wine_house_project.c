@@ -16,13 +16,11 @@ typedef struct Node {
 } Node;
 
 typedef struct {
-  // Primeiro Nó da Fila
+
   Node *head;
 
-  // Último Nó da Fila
   Node *tail;
 
-  // Indica a quantidade de elementos da fila
   int amount;
 } Queue;
 
@@ -298,37 +296,50 @@ int main(void) {
     printf("Insira qualquer outro caractere para sair.\n\n");
     scanf("%d", &choice);
 
-    if (choice == 1)
-      add_new_wine(wine_house);
 
-    else if (choice == 2)
-      print_wine_queue(wine_house);
+    switch(choice) {
+      case 1:
 
-    else if (choice == 3)
-      print_wine_queue(special_occasion_wines);
-      
-    else if (choice == 4)
-      oldest_registered_wine(wine_house);
+        add_new_wine(wine_house);
 
-    else if (choice == 5)
-      push(special_occasion_wines, wine_house->tail->wine);
+      case 2:
 
-    else if (choice == 6)
-      recent_registered_wine(wine_house);
+        print_wine_queue(wine_house);
 
-    else if (choice == 7)
-      print_5_oldest_registered_wines(wine_house);
+      case 3:
 
-    else if (choice == 8)
-      print_5_most_recent_records(wine_house);
+        print_wine_queue(special_occasion_wines);
 
-    else
-      break;
+      case 4:
+
+        oldest_registered_wine(wine_house);
+
+      case 5:
+
+        push(special_occasion_wines, wine_house->tail->wine);
+
+      case 6:
+
+        recent_registered_wine(wine_house);
+
+      case 7:
+
+        print_5_oldest_registered_wines(wine_house);
+
+      case 8:
+
+        print_5_most_recent_records(wine_house);
+
+      default:
+        break;
+    }
   }
 
   printf("\n\nAdega de Vinhos: \n\n");
   print_wine_queue(wine_house);
+
   printf("\n\nSeleção de Vinhos Especiais: \n\n");
   print_wine_queue(special_occasion_wines);
+
   return 0;
 }
