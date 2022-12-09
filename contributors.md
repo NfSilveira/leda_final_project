@@ -1,5 +1,5 @@
 # Nome da dupla:
-Luis de Moura - PT3019861\n
+Luis de Moura - PT3019861 e
 Nicolas Freitas Silveira - PT3019144
 
 # Contribuições de Nicolas Freitas Silveira:
