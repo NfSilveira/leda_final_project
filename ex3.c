@@ -30,7 +30,7 @@ void push(struct stack** s, int x) {
 	struct stack* p = (struct stack*) calloc(1, sizeof(*p));
 
 	if (p == NULL) {
-		fprintf(stderr, "Falha na Alocação de Memória.\n");
+		printf("Falha na Alocação de Memória.\n");
 		return;
 	}
 
@@ -204,4 +204,3 @@ int main(void) {
 
 	return 0;
 }
-
