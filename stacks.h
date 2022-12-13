@@ -21,13 +21,13 @@ struct Stack {
 };
 
 
-int print_items_amount (Stack* s) {
+int print_items_amount (struct Stack* s) {
 
     return s -> stack_items_amount;
 }
 
 
-bool is_full(Stack* s) {
+bool is_full(struct Stack* s) {
 
     bool is_full_check = false;
 
@@ -45,11 +45,11 @@ bool is_full(Stack* s) {
 }
 
 
-bool is_empty(Stack *s) {
+bool is_empty(struct Stack *s) {
 
     bool is_empty_check = false;
 
-    if (s -> stack_items_amount == NULL) {
+    if (s -> stack_items_amount == 0) {
         is_empty_check = true;
     }
 
@@ -63,8 +63,8 @@ bool is_empty(Stack *s) {
 }
 
 
-void find_stack_element(Stack* s, int element) {
-    Node* aux = s -> stack_top;
+void find_stack_element(struct Stack* s, int element) {
+    struct Node* aux = s -> stack_top;
     int check = 0;
 
     if (is_empty(s)) {
@@ -92,8 +92,8 @@ void find_stack_element(Stack* s, int element) {
 }
 
 
-void print_all_elements(Stack* s) {
-    Node* aux = s -> stack_top;
+void print_all_elements(struct Stack* s) {
+    struct Node* aux = s -> stack_top;
 
     if (is_empty(s)) {
         printf("The stack is empty!\n");
@@ -108,7 +108,7 @@ void print_all_elements(Stack* s) {
 }
 
 
-void push(Stack* s, int data) {
+void push(struct Stack* s, int data) {
 
 
     if (is_full(s)) {
@@ -132,7 +132,7 @@ void push(Stack* s, int data) {
 }
 
 
-int pop(Stack* s) {
+int pop(struct Stack* s) {
 
     if (is_empty(s)) {
         printf("The stack is empty!\n");
@@ -154,4 +154,3 @@ int pop(Stack* s) {
         }
     }
 }
-
